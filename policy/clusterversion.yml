@@ -1,0 +1,15 @@
+apiVersion: config.openshift.io/v1
+kind: ClusterVersion
+metadata:
+  name: version
+spec:
+  channel: stable-4.12
+  upstream: https://api.openshift.com/api/upgrades_info/v1/graph
+  desiredUpdate:
+    force: false
+    version: 4.12.35
+    image: ''
+status:
+  history:
+    - version: '{{ (lookup "config.openshift.io/v1" "ClusterVersion" "" "version").spec.desiredUpdate.version }}'
+      state: "Completed"

@@ -1,0 +1,23 @@
+apiVersion: ran.openshift.io/v1alpha1
+kind: ClusterGroupUpgrade
+metadata:
+  name: ocp-41235
+  namespace: bry-tam-policies-prod
+spec:
+  backup: false
+  clusters: 
+  - bry
+  enable: true 
+  managedPolicies: 
+    - ocp-upgrade
+  preCaching: false
+  remediationStrategy: 
+    maxConcurrency: 1
+    timeout: 240
+  # clusterLabelSelectors: 
+  #   - matchExpressions:
+  #     - key: label1
+  #     operator: In
+  #     values:
+  #       - value1a
+  #       - value1b
