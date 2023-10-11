@@ -2,7 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - ocp-upgrade-41226.yml
-  
+  - ocp-upgrade-41315.yml
+  - namespace.yml
+
 generators:
   - generator.yml

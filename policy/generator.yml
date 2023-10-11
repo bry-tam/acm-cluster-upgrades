@@ -4,7 +4,7 @@ kind: PolicyGenerator
 metadata:
   name: gen-policy-generator
 policyDefaults:
-  namespace: bry-tam-policies
+  namespace: bry-tam-policies-qa
   remediationAction: inform
   ## turn off the default compliance annotations
   categories: []
@@ -19,10 +19,13 @@ policies:
   - name: api-deprecated-ack
     remediationAction: enforce
     manifests:
-      - path: 412-admin-acks-configmap.yml
+      - path: admin-acks-configmap.yml
 
   - name: ocp-upgrade
     remediationAction: enforce
+    dependencies:
+      - name: "api-deprecated-ack"
+        compliance: "Compliant"
     manifests:
       - path: clusterversion.yml
 

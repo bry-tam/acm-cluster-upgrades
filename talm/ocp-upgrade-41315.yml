@@ -1,13 +1,13 @@
 apiVersion: ran.openshift.io/v1alpha1
 kind: ClusterGroupUpgrade
 metadata:
-  name: ocp-41235
+  name: ocp-41315
   namespace: bry-tam-policies-prod
 spec:
   backup: false
   clusters: 
-  - bry
-  enable: true 
+  - prod-1
+  enable: false 
   managedPolicies: 
     - ocp-upgrade
   preCaching: false
