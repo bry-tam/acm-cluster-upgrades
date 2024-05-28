@@ -1,5 +1,6 @@
 ## Introduction
-The resources in this repository are used to demonstrate how to use RHACM Policy to upgrade OpenShift clusters.
+The resources in this repository are used to demonstrate how to use RHACM Policy to upgrade OpenShift clusters.  You can see a video of this demonstration at https://www.youtube.com/watch?v=d7Gw-oVy1i4
+
 
 There are two upgrades present; the `policy` directory contains resources to perform an upgrade.  The `talm` directory contains the same resource, plus the additional configuration to perform the upgrade using the [TALM Operator](https://docs.openshift.com/container-platform/4.12/scalability_and_performance/ztp_far_edge/cnf-talm-for-cluster-upgrades.html).
 
